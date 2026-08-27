@@ -1,0 +1,43 @@
+{
+  "name": "comm-server",
+  "version": "1.0.0",
+  "description": "Realtime update communication server for Flutter clients",
+  "private": true,
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "build": "nest build",
+    "lint": "eslint '{src,test}/**/*.ts' --fix",
+    "test": "echo \"No tests configured yet\""
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.2.0",
+    "@nestjs/config": "^3.1.0",
+    "@nestjs/core": "^10.2.0",
+    "@nestjs/platform-express": "^10.2.0",
+    "@nestjs/platform-socket.io": "^10.2.0",
+    "@nestjs/websockets": "^10.2.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "joi": "^17.11.0",
+    "nestjs-pino": "^3.1.0",
+    "pino": "^8.20.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.2.0",
+    "@nestjs/schematics": "^10.2.0",
+    "@types/node": "^20.11.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.2",
+    "eslint-plugin-jsdoc": "^39.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "pino-pretty": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.6.0",
+    "@types/express": "^4.17.20"
+  }
+}

@@ -1,0 +1,10 @@
+name: noten_server
+description: WebSocket server for conductor-musician app
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  web_socket_channel: ^2.3.0
+  system_info2: ^2.0.1

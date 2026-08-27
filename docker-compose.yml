@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  dart-communication-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: noten-server:latest
+    ports:
+      - 4041:4041
+    restart: unless-stopped
+
+  update-server:
+    build:
+      context: ./comm-server
+      dockerfile: Dockerfile
+    image: comm-server:latest
+    ports:
+      - 3001:3000
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - API_KEY=changeme
+      - RELEASE_DATA_PATH=./data/releases.json
+      - MAINTENANCE_MODE=false
+    volumes:
+      - ./comm-server/data:/usr/src/app/data
+    restart: unless-stopped
